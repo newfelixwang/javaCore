@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+      /* 设置后代选择器 设置所有的选择器 */
+    .home span{
+      color: purple;
+    }
+
+    /* 设置后代选择器，第一个元素信息 */
+    .home>span{
+      background-color: aquamarine;
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="home">
+    <span>span元素信息2</span>
+    <div class="classOn1">
+      <p>这个是1</p>
+      <p>这个是2</p>
+      <p>这个是3</p>
+    </div>
+    <div class="classOn2">
+      <span>span元素信息2</span>
+      <p>这个是4</p>
+      <p>这个是5</p>
+      <p>这个是6</p>
+    </div>
+  </div>
+
+
+  <!-- 不希望被选中 -->
+  <span>嘻嘻嘻</span>
+  <div>
+    <span>嘿嘿嘿</span>
+  </div>
+
+
+</body>
+</html>

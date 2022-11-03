@@ -1,0 +1,10 @@
+.title{
+  font-size: 50px;
+  color: bisque;
+}
+
+.box{
+  width: 600px;
+  height: 100px;
+  background-color: beige;
+}
