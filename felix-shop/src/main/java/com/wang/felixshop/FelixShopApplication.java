@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FelixShopApplication {
 
     public static void main(String[] args) {
+
+        System.out.println("修改");
         SpringApplication.run(FelixShopApplication.class, args);
     }
 
