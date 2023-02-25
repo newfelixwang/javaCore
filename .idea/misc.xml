@@ -7,6 +7,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/felix-shop/pom.xml" />
+        <option value="$PROJECT_DIR$/felix-shop/felix.coupon/pom.xml" />
+        <option value="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/pom.xml" />
+        <option value="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/pom.xml" />
       </list>
     </option>
   </component>
