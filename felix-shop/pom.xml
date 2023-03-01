@@ -48,6 +48,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.progsbase.libraries</groupId>
+            <artifactId>JSON</artifactId>
+            <version>0.4.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
