@@ -1,6 +1,7 @@
 package com.wang.couponapp.controller;
 
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class TestController {
 
 
-    @RequestMapping("/test")
+    @GetMapping("/test")
     public String test(){
 
         Map<Object, Object> objectObjectMap = Collections.synchronizedMap(new HashMap<>());
