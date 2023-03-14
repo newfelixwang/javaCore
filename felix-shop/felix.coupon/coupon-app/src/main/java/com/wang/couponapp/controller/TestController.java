@@ -1,13 +1,11 @@
 package com.wang.couponapp.controller;
 
+import com.wang.couponapp.entity.User;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -36,6 +34,22 @@ public class TestController {
 
         OAuth2ResourceServerProperties.Jwt jwt = new OAuth2ResourceServerProperties.Jwt();
 
+        char []  chars1  = {1,3};
+        char [] chars2 = new char [5];
+        char [] chars3 = {'f','v'};
+        //char [] chars4 = {''};
+        List lists = new ArrayList();
+        lists.add("1");
+        lists.add(2);
+
+        TreeSet treeSet = new TreeSet();
+        boolean add = treeSet.add("");
+
+        ThreadLocal threadLocal = new ThreadLocal();
+        threadLocal.set("");;
+        Object o = threadLocal.get();
+        threadLocal.remove();
+        System.out.println(String.class.getClassLoader());
         return "111";
     }
 
