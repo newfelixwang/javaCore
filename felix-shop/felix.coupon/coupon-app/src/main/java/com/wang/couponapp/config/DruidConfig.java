@@ -43,6 +43,7 @@ public class DruidConfig {
     }
     @Bean
     public ServletRegistrationBean druidServlet() {
+
         ServletRegistrationBean servletRegistrationBean = new
                 ServletRegistrationBean();
         servletRegistrationBean.setServlet(new StatViewServlet());
