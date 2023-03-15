@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88f53027-d749-448b-9934-65b3bbc3a4bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/config/DruidConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/JwtController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/Extend1.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/Extend1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/Extend2.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/Extend2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/JwtController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/jiekou1.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/jiekou1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/jiekou2.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/jiekou2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/jiekou3.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/test/jiekou3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/src/main/java/com/wang/couponserviceapi/CouponServiceApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/src/main/java/com/wang/couponserviceapi/CouponServiceApiApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +119,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CouponAppApplication">
+  <component name="RunManager" selected="JUnit.CouponAppApplicationTests.insert">
     <configuration name="JwtController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wang.couponapp.controller.test.JwtController" />
       <module name="coupon-app" />
@@ -156,6 +142,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponAppApplicationTests.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="coupon-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wang.couponapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.wang.couponapp" />
+      <option name="MAIN_CLASS_NAME" value="com.wang.couponapp.CouponAppApplicationTests" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,6 +192,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CouponAppApplicationTests.insert" />
         <item itemvalue="Application.JwtController" />
         <item itemvalue="Application.TestController" />
       </list>
@@ -218,6 +221,7 @@
       <workItem from="1678668801688" duration="475000" />
       <workItem from="1678669317715" duration="1679000" />
       <workItem from="1678671647027" duration="2035000" />
+      <workItem from="1678921446638" duration="281000" />
     </task>
     <servers />
   </component>

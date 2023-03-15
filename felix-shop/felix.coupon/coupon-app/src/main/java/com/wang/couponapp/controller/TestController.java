@@ -54,14 +54,5 @@ public class TestController {
         return "111";
     }
 
-    public static void main(String[] args) {
-        final String s1 = "xdclass";
-        String s2 = s1 + ".net";
-        String s3 = "xdclass"+".net";
-        System.out.println(s2==s3);
-        LinkedList linkedList = new LinkedList();
-        linkedList.add("");
-        System.out.println(s3=="xdclass.net");
-    }
 
 }
