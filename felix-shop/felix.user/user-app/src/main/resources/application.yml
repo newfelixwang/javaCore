@@ -1,6 +1,5 @@
-
 server:
-  port: 8080
+  port: 8082
 druid:
   allow: #允许登陆的IP地址
   ip: 127.0.0.1
@@ -10,8 +9,6 @@ druid:
 
 
 spring:
-  profiles:
-    active: dev
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/shop?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&useSSL=false
@@ -42,3 +39,5 @@ spring:
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties:
       druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  profiles:
+    active: dev
