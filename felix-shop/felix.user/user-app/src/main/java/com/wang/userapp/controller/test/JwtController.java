@@ -1,6 +1,6 @@
-package com.wang.couponapp.controller.test;
+package com.wang.userapp.controller.test;
 
-import com.wang.couponapp.entity.User;
+import com.wang.userapp.entity.User;
 import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;

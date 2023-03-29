@@ -1,9 +1,9 @@
-package com.wang.couponapp;
+package com.wang.userapp;
 
-import com.wang.couponapp.domain.TCoupon;
-import com.wang.couponapp.domain.TCouponExample;
-import com.wang.couponapp.mapper.TCouponMapper;
-import com.wang.couponapp.service.CouponService;
+import com.wang.userapp.domain.TCoupon;
+import com.wang.userapp.domain.TCouponExample;
+import com.wang.userapp.mapper.TCouponMapper;
+import com.wang.userapp.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -13,12 +13,12 @@ import java.util.List;
 import java.util.UUID;
 
 @SpringBootTest
-class CouponAppApplicationTests {
+class userappApplicationTests {
 
 
 
     @Resource
-    private CouponService couponService;
+    private UserService couponService;
 
     @Resource
     private TCouponMapper tCouponMapper;

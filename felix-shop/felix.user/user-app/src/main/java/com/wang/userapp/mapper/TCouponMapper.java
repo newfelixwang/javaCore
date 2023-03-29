@@ -1,7 +1,7 @@
-package com.wang.couponapp.mapper;
+package com.wang.userapp.mapper;
 
-import com.wang.couponapp.domain.TCoupon;
-import com.wang.couponapp.domain.TCouponExample;
+import com.wang.userapp.domain.TCoupon;
+import com.wang.userapp.domain.TCouponExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.DeleteProvider;

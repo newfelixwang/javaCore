@@ -1,4 +1,4 @@
-package com.wang.couponapp.domain;
+package com.wang.userapp.domain;
 
 import java.util.ArrayList;
 import java.util.Date;

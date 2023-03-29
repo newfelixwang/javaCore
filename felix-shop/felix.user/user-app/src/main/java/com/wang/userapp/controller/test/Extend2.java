@@ -1,4 +1,4 @@
-package com.wang.couponapp.controller.test;
+package com.wang.userapp.controller.test;
 
 public class Extend2 {
 }

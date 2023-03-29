@@ -1,4 +1,4 @@
-package com.wang.couponapp.mapper;
+package com.wang.userapp.mapper;
 
 import static org.apache.ibatis.jdbc.SqlBuilder.BEGIN;
 import static org.apache.ibatis.jdbc.SqlBuilder.DELETE_FROM;
@@ -13,10 +13,10 @@ import static org.apache.ibatis.jdbc.SqlBuilder.UPDATE;
 import static org.apache.ibatis.jdbc.SqlBuilder.VALUES;
 import static org.apache.ibatis.jdbc.SqlBuilder.WHERE;
 
-import com.wang.couponapp.domain.TUserCoupon;
-import com.wang.couponapp.domain.TUserCouponExample.Criteria;
-import com.wang.couponapp.domain.TUserCouponExample.Criterion;
-import com.wang.couponapp.domain.TUserCouponExample;
+import com.wang.userapp.domain.TUserCoupon;
+import com.wang.userapp.domain.TUserCouponExample.Criteria;
+import com.wang.userapp.domain.TUserCouponExample.Criterion;
+import com.wang.userapp.domain.TUserCouponExample;
 import java.util.List;
 import java.util.Map;
 

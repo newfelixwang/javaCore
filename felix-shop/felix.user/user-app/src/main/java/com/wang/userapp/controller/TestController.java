@@ -1,6 +1,6 @@
-package com.wang.couponapp.controller;
+package com.wang.userapp.controller;
 
-import com.wang.couponapp.entity.User;
+import com.wang.userapp.entity.User;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

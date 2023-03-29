@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8089
 druid:
   allow: #允许登陆的IP地址
   ip: 127.0.0.1

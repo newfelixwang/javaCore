@@ -1,4 +1,4 @@
-package com.wang.couponapp.entity;
+package com.wang.userapp.entity;
 
 /**
  * 用户基本信息

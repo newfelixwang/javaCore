@@ -1,4 +1,4 @@
-package com.wang.couponapp.config;
+package com.wang.userapp.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -16,7 +16,7 @@ import java.util.Map;
 
 /**
  * @Author：wp
- * @Package：com.wang.couponapp.config
+ * @Package：com.wang.userapp.config
  * @Project：java-Core
  * @name：DruidConfig
  * @Date：2023/3/13 9:42

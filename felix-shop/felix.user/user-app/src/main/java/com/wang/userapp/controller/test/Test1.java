@@ -1,4 +1,4 @@
-package com.wang.couponapp.controller.test;
+package com.wang.userapp.controller.test;
 
 public class Test1  extends  Extend2 implements jiekou1 ,jiekou3 {
 
