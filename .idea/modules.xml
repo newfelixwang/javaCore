@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/coupon-service-api.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/coupon-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/felix-coupon.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/felix-coupon.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix-shop.iml" filepath="$PROJECT_DIR$/felix-shop/felix-shop.iml" />
-      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/felix.coupon.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/felix.coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/felix-user.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/felix-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/user-app/user-app.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/user-app/user-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/user-service-api/user-service-api.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/user-service-api/user-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>

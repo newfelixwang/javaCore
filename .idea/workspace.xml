@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88f53027-d749-448b-9934-65b3bbc3a4bc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java/com/wang/couponapp/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/resources/application-dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$PROJECT_DIR$/../../../../work-tools/apache-maven-3.3.9/apache-maven-3.3.9" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\work-tools\apache-maven-3.3.9\apache-maven-3.3.9\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -94,7 +99,7 @@
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/felix-shop/felix.user/user-service-api/pom.xml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -105,9 +110,13 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22490472" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work-space\code\back\javaCore\felix-shop\felix.user\user-app\src\main\resources" />
+      <recent name="D:\work-space\code\back\javaCore\felix-shop\felix.coupon\coupon-app\src\main\resources" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wang.couponapp.controller" />
     </key>
@@ -119,10 +128,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CouponAppApplicationTests.insert">
+  <component name="RunManager" selected="Spring Boot.UserAppApplication">
     <configuration name="JwtController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wang.couponapp.controller.test.JwtController" />
-      <module name="coupon-app" />
+      <module name="user-app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.wang.couponapp.controller.test.*" />
@@ -135,7 +144,7 @@
     </configuration>
     <configuration name="TestController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wang.couponapp.controller.TestController" />
-      <module name="coupon-app" />
+      <module name="user-app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.wang.couponapp.controller.test.*" />
@@ -147,7 +156,7 @@
       </method>
     </configuration>
     <configuration name="CouponAppApplicationTests.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="coupon-app" />
+      <module name="user-app" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.wang.couponapp.*" />
@@ -163,21 +172,42 @@
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="felix.coupon" />
+      <module name="felix.user" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.felixcoupon.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CouponAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="CouponAppApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="coupon-app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.couponapp.CouponAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CouponServiceApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="CouponAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.couponapp.CouponAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponServiceApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-service-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.userserviceapi.UserServiceApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponServiceApiApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="coupon-service-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.couponserviceapi.CouponServiceApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponServiceApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-service-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.couponserviceapi.CouponServiceApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,6 +216,13 @@
     <configuration name="FelixShopApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="felix-shop" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.felixshop.FelixShopApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="user-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wang.userapp.UserAppApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,6 +259,12 @@
       <workItem from="1678669317715" duration="1679000" />
       <workItem from="1678671647027" duration="2035000" />
       <workItem from="1678921446638" duration="281000" />
+      <workItem from="1679438383564" duration="1127000" />
+      <workItem from="1680042292592" duration="3564000" />
+      <workItem from="1680128845243" duration="2789000" />
+      <workItem from="1680820735563" duration="599000" />
+      <workItem from="1681079891470" duration="915000" />
+      <workItem from="1681132980412" duration="375000" />
     </task>
     <servers />
   </component>
