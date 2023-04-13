@@ -41,6 +41,11 @@ public class DruidConfig {
     public DataSource druidDataSource() {
         return new DruidDataSource();
     }
+
+    /**
+     * 配置druid展示层
+     * @return
+     */
     @Bean
     public ServletRegistrationBean druidServlet() {
 
