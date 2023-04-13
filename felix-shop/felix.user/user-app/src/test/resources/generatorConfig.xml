@@ -25,7 +25,7 @@
 		<!-- gem entity -->
 		<!-- data -->
 		<javaModelGenerator targetPackage=" com.wang.userapp.domain"
-							targetProject="./src/main/java">
+							targetProject="felix-shop/felix.user/user-app/src/test/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="false" />
 		</javaModelGenerator>
@@ -35,7 +35,7 @@
 		<!-- data -->
 		<javaClientGenerator type="ANNOTATEDMAPPER"
 							 targetPackage="com.wang.userapp.mapper"
-							 targetProject="./src/main/java">
+							 targetProject="felix-shop/felix.user/user-app/src/test/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
@@ -43,9 +43,9 @@
 
 
 
-		<table tableName="t_coupon">
-			<generatedKey column="id" sqlStatement="JDBC"/>
-		</table>
+<!--		<table tableName="t_coupon">-->
+<!--			<generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--		</table>-->
 
 		<table tableName="t_user_coupon">
 			<generatedKey column="id" sqlStatement="JDBC"/>

@@ -13,7 +13,7 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+		<jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
 						connectionURL="jdbc:mysql://127.0.0.1:3306/shop?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false"
 						userId="root" password="123456" />
 
@@ -25,7 +25,7 @@
 		<!-- gem entity -->
 		<!-- data -->
 		<javaModelGenerator targetPackage=" com.wang.couponapp.domain"
-							targetProject="./src/main/java">
+							targetProject="felix-shop/felix.coupon/coupon-app/src/test/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="false" />
 		</javaModelGenerator>
@@ -35,10 +35,9 @@
 		<!-- data -->
 		<javaClientGenerator type="ANNOTATEDMAPPER"
 							 targetPackage="com.wang.couponapp.mapper"
-							 targetProject="./src/main/java">
+							 targetProject="felix-shop/felix.coupon/coupon-app/src/test/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-
 
 
 
@@ -47,9 +46,9 @@
 			<generatedKey column="id" sqlStatement="JDBC"/>
 		</table>
 
-		<table tableName="t_user_coupon">
-			<generatedKey column="id" sqlStatement="JDBC"/>
-		</table>
+<!--		<table tableName="t_user_coupon">-->
+<!--			<generatedKey column="id" sqlStatement="JDBC"/>-->
+<!--		</table>-->
 
 
 

@@ -1,5 +1,8 @@
 package com.wang.couponapp.mapper;
 
+import com.wang.couponapp.domain.TCoupon;
+import com.wang.couponapp.domain.TCouponExample;
+
 import static org.apache.ibatis.jdbc.SqlBuilder.BEGIN;
 import static org.apache.ibatis.jdbc.SqlBuilder.DELETE_FROM;
 import static org.apache.ibatis.jdbc.SqlBuilder.FROM;
@@ -13,10 +16,6 @@ import static org.apache.ibatis.jdbc.SqlBuilder.UPDATE;
 import static org.apache.ibatis.jdbc.SqlBuilder.VALUES;
 import static org.apache.ibatis.jdbc.SqlBuilder.WHERE;
 
-import com.wang.couponapp.domain.TCoupon;
-import com.wang.couponapp.domain.TCouponExample.Criteria;
-import com.wang.couponapp.domain.TCouponExample.Criterion;
-import com.wang.couponapp.domain.TCouponExample;
 import java.util.List;
 import java.util.Map;
 
@@ -73,6 +72,14 @@ public class TCouponSqlProvider {
             VALUES("create_time", "#{createTime,jdbcType=TIMESTAMP}");
         }
         
+        if (record.getStartTime() != null) {
+            VALUES("start_time", "#{startTime,jdbcType=TIMESTAMP}");
+        }
+        
+        if (record.getEndTime() != null) {
+            VALUES("end_time", "#{endTime,jdbcType=TIMESTAMP}");
+        }
+        
         return SQL();
     }
 
@@ -91,6 +98,8 @@ public class TCouponSqlProvider {
         SELECT("title");
         SELECT("status");
         SELECT("create_time");
+        SELECT("start_time");
+        SELECT("end_time");
         FROM("t_coupon");
         applyWhere(example, false);
         
@@ -98,20 +107,7 @@ public class TCouponSqlProvider {
             ORDER_BY(example.getOrderByClause());
         }
         
-        String sqlString = SQL();
-        if (example != null && example.getLimit() != null) {
-            sqlString += " limit " + example.getLimit();
-        }
-        if (example != null && example.getOffset() != null) {
-            sqlString += " offset " + example.getOffset();
-        }
-        if (example != null && example.getLimit() != null) {
-            sqlString += " limit " + example.getLimit();
-        }
-        if (example != null && example.getOffset() != null) {
-            sqlString += " offset " + example.getOffset();
-        }
-        return sqlString;
+        return SQL();
     }
 
     public String updateByExampleSelective(Map<String, Object> parameter) {
@@ -157,6 +153,14 @@ public class TCouponSqlProvider {
             SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
         }
         
+        if (record.getStartTime() != null) {
+            SET("start_time = #{record.startTime,jdbcType=TIMESTAMP}");
+        }
+        
+        if (record.getEndTime() != null) {
+            SET("end_time = #{record.endTime,jdbcType=TIMESTAMP}");
+        }
+        
         applyWhere(example, true);
         return SQL();
     }
@@ -174,6 +178,8 @@ public class TCouponSqlProvider {
         SET("title = #{record.title,jdbcType=VARCHAR}");
         SET("status = #{record.status,jdbcType=INTEGER}");
         SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
+        SET("start_time = #{record.startTime,jdbcType=TIMESTAMP}");
+        SET("end_time = #{record.endTime,jdbcType=TIMESTAMP}");
         
         TCouponExample example = (TCouponExample) parameter.get("example");
         applyWhere(example, true);
@@ -216,6 +222,14 @@ public class TCouponSqlProvider {
             SET("create_time = #{createTime,jdbcType=TIMESTAMP}");
         }
         
+        if (record.getStartTime() != null) {
+            SET("start_time = #{startTime,jdbcType=TIMESTAMP}");
+        }
+        
+        if (record.getEndTime() != null) {
+            SET("end_time = #{endTime,jdbcType=TIMESTAMP}");
+        }
+        
         WHERE("id = #{id,jdbcType=INTEGER}");
         
         return SQL();
@@ -249,10 +263,10 @@ public class TCouponSqlProvider {
         }
         
         StringBuilder sb = new StringBuilder();
-        List<Criteria> oredCriteria = example.getOredCriteria();
+        List<TCouponExample.Criteria> oredCriteria = example.getOredCriteria();
         boolean firstCriteria = true;
         for (int i = 0; i < oredCriteria.size(); i++) {
-            Criteria criteria = oredCriteria.get(i);
+            TCouponExample.Criteria criteria = oredCriteria.get(i);
             if (criteria.isValid()) {
                 if (firstCriteria) {
                     firstCriteria = false;
@@ -261,10 +275,10 @@ public class TCouponSqlProvider {
                 }
                 
                 sb.append('(');
-                List<Criterion> criterions = criteria.getAllCriteria();
+                List<TCouponExample.Criterion> criterions = criteria.getAllCriteria();
                 boolean firstCriterion = true;
                 for (int j = 0; j < criterions.size(); j++) {
-                    Criterion criterion = criterions.get(j);
+                    TCouponExample.Criterion criterion = criterions.get(j);
                     if (firstCriterion) {
                         firstCriterion = false;
                     } else {
