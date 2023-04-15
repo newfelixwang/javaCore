@@ -37,4 +37,6 @@ public class CouponServiceImpl implements CouponService {
     public List<TCoupon> getCouponList() {
         return tCouponMapper.selectByExample(new TCouponExample());
     }
+
+
 }

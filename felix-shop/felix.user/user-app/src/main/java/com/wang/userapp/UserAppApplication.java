@@ -8,14 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author wp
  * @ClassName UserAppApplication
- * @description: TODO
+ * @description: 用户服务启动类
  * @datetime 2023年 03月 29日 6:57
  * @version: 1.0
  */
 @SpringBootApplication
 @MapperScan("com.wang.userapp.mapper")
 @EnableDubboConfig
-@DubboComponentScan("com.wang.xdclassdubboproviders.service")
+@DubboComponentScan("com.wang.userapp.service.dubbo")
 public class UserAppApplication {
 
     public static void main(String[] args) {

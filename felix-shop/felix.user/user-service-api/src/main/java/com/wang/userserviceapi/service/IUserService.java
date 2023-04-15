@@ -1,5 +1,7 @@
 package com.wang.userserviceapi.service;
 
+import com.wang.userserviceapi.vo.UserVO;
+
 /**
  * @author wp
  * @ClassName IUserService
@@ -9,4 +11,6 @@ package com.wang.userserviceapi.service;
  */
 
 public interface IUserService {
+
+    UserVO getByUserId(int id);
 }
