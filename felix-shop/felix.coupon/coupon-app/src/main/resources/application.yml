@@ -40,29 +40,3 @@ spring:
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties:
       druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-
-dubbo:
-  application:
-    name: user-coupon
-  registry:
-    id: zookeeper-registry
-    # 注册中⼼协议
-    protocol: zookeeper
-    # 注册中⼼地址
-    address: 127.0.0.1:2181
-  # dubbo协议在20880端⼝暴露服务
-  # 协议名称
-  protocol:
-    name: dubbo
-    # 协议端⼝
-    port: 20881
-    # 协议访问log
-    accesslog: dubbo-access.log
-  # 重试次数
-  provider:
-    retries: 0
-    # 超时时间
-    timeout: 3000
-  # 注册监控中⼼
-  monitor:
-    protocol: registry
