@@ -2,6 +2,7 @@ package com.wang.couponapp.service;
 
 
 import com.wang.couponapp.domain.TCoupon;
+import com.wang.userserviceapi.vo.UserVO;
 
 import java.util.List;
 
@@ -19,7 +20,6 @@ public interface CouponService {
 
     List<TCoupon> getCouponList();
 
-
-
+    UserVO getByUserId(Integer id);
 
 }

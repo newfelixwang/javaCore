@@ -1,11 +1,16 @@
 package com.wang.couponapp.controller;
 
 import com.wang.couponapp.entity.User;
+import com.wang.couponapp.service.CouponService;
+import com.wang.userserviceapi.vo.UserVO;
+import org.apache.dubbo.config.support.Parameter;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.OAuth2ResourceServerProperties;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -19,6 +24,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @RestController
 public class TestController {
+
+
+    @Resource
+    private CouponService couponService;
 
 
     @GetMapping("/test")
@@ -52,6 +61,13 @@ public class TestController {
         threadLocal.remove();
         System.out.println(String.class.getClassLoader());
         return "111";
+    }
+
+
+    @GetMapping("/test/{id}")
+    public UserVO test(@PathVariable Integer id){
+        UserVO user = couponService.getByUserId(id);
+        return user;
     }
 
 

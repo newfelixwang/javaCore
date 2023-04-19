@@ -1,5 +1,6 @@
 package com.wang.userapp.service.dubbo;
 
+import com.wang.userapp.domain.TUserCoupon;
 import com.wang.userapp.mapper.TUserCouponMapper;
 import com.wang.userserviceapi.service.IUserService;
 import com.wang.userserviceapi.vo.UserVO;
@@ -16,7 +17,7 @@ import javax.annotation.Resource;
  * @Date：2023/4/13 17:04
  * @Filename：IUserServiceImpl
  */
-@Service
+@Service(version = "1.0.0",group = "user-info")
 public class IUserServiceImpl implements IUserService {
 
 
@@ -26,7 +27,8 @@ public class IUserServiceImpl implements IUserService {
     @Override
     public UserVO getByUserId(int id) {
         UserVO userVO = new UserVO();
-        BeanUtils.copyProperties(tUserCouponMapper.selectByPrimaryKey(id), userVO);
+        TUserCoupon tUserCoupon = tUserCouponMapper.selectByPrimaryKey(id);
+        BeanUtils.copyProperties(tUserCoupon, userVO);
         return userVO;
     }
 }

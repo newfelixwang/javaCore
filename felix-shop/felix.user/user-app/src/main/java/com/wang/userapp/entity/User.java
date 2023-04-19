@@ -1,9 +1,11 @@
 package com.wang.userapp.entity;
 
+import java.io.Serializable;
+
 /**
  * 用户基本信息
  */
-public class User {
+public class User implements Serializable {
 
     private Integer id;
 
