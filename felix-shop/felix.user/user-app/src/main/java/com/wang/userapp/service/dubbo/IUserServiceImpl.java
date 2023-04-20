@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  * @Date：2023/4/13 17:04
  * @Filename：IUserServiceImpl
  */
-@Service(version = "1.0.0",group = "user-info")
+@Service
 public class IUserServiceImpl implements IUserService {
 
 

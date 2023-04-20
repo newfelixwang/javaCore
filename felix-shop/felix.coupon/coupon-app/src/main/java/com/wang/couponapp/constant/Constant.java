@@ -13,4 +13,9 @@ public class Constant {
     public static final int USERFULL = 0;
 
     public static final int USERLESS = 1;
+
+
+    public interface CacheTime {
+        int COUPON_TIME = 10;
+    }
 }
