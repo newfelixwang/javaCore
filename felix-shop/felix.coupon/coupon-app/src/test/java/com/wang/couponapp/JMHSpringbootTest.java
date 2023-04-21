@@ -9,6 +9,8 @@ import org.openjdk.jmh.runner.options.OptionsBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.concurrent.ExecutionException;
+
 /**
  * @Author：wp
  * @Package：com.wang.couponapp
@@ -46,7 +48,7 @@ public class JMHSpringbootTest {
      * benchmark执行多次，此注解代表触发我们所要进行基准测试的方法
      */
     @Benchmark
-    public void test(){
+    public void test() throws ExecutionException {
         System.out.println(couponService.getCouponList());
     }
 

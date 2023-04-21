@@ -5,6 +5,7 @@ import com.wang.couponapp.domain.TCoupon;
 import com.wang.userserviceapi.vo.UserVO;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @Author：wp
@@ -18,8 +19,10 @@ public interface CouponService {
 
     void print();
 
-    List<TCoupon> getCouponList();
+    List<TCoupon> getCouponList() throws ExecutionException;
 
     UserVO getByUserId(Integer id);
+
+    void updateCoupon();
 
 }

@@ -16,6 +16,11 @@ public class Constant {
 
 
     public interface CacheTime {
-        int COUPON_TIME = 10;
+
+        //优惠券缓存时间
+        int COUPON_CACHE_TIME = 10;
+
+        //优惠券刷新时间
+        int COUPON_REFRESH_TIME = 5;
     }
 }

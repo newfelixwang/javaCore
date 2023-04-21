@@ -65,3 +65,9 @@ dubbo:
   # 注册监控中⼼
   monitor:
     protocol: registry
+
+logging:
+  name: felix-coupon
+  config: classpath:logback-spring.xml
+  level:
+    root: info
