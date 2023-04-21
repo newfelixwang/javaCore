@@ -28,7 +28,7 @@ public class TestJobHandle {
     private CouponService couponService;
 
     //秒 分  时 日 月 年
-    @Scheduled(cron = "0 0/1 * * * ?")
+    @Scheduled(cron = "0/5 * * * * ?")
     private void test() {
         logger.info("定時任務");
         couponService.updateCoupon();
