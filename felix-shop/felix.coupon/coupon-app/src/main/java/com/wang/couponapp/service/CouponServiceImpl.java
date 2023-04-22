@@ -11,6 +11,8 @@ import com.wang.couponapp.mapper.TCouponMapper;
 import com.wang.userserviceapi.service.IUserService;
 import com.wang.userserviceapi.vo.UserVO;
 import org.apache.dubbo.config.annotation.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -35,6 +37,8 @@ import java.util.stream.Collectors;
 @Service
 public class CouponServiceImpl implements CouponService {
 
+
+    Logger logger = LoggerFactory.getLogger(CouponServiceImpl.class);
 
     @Resource
     private TCouponMapper tCouponMapper;
@@ -126,7 +130,8 @@ public class CouponServiceImpl implements CouponService {
     }
 
 
-    private List<TCoupon> loadCoupon(Integer o) {
+    @Override
+    public List<TCoupon> loadCoupon(Integer integer) {
         TCouponExample example = new TCouponExample();
         TCouponExample.Criteria criteria = example.createCriteria();
         criteria.andStatusEqualTo(Constant.USERFULL);
@@ -147,6 +152,7 @@ public class CouponServiceImpl implements CouponService {
     public void updateCoupon() {
         Map updateMap = new ConcurrentHashMap();
         List<TCoupon> tCoupons = this.loadCoupon(1);
+        logger.info("当前更新的数量[{}]");
         updateMap.put(1, tCoupons);
         couponMap = updateMap;
     }

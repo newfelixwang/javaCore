@@ -25,4 +25,7 @@ public interface CouponService {
 
     void updateCoupon();
 
+
+    List<TCoupon> loadCoupon(Integer integer);
+
 }

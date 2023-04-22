@@ -52,4 +52,14 @@ public class JMHSpringbootTest {
         System.out.println(couponService.getCouponList());
     }
 
+
+
+    @Benchmark
+    public void testDB(){
+        System.out.println(couponService.loadCoupon(1));
+    }
+
+
+
+
 }
