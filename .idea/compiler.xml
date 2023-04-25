@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="felix-coupon" />
-        <module name="felix-shop" />
+        <module name="order-service-api" />
         <module name="coupon-service-api" />
+        <module name="shop" />
         <module name="user-app" />
-        <module name="felix-user" />
+        <module name="order-app" />
         <module name="user-service-api" />
         <module name="coupon-app" />
       </profile>
@@ -21,9 +22,16 @@
       <module name="coupon-service-api" target="1.8" />
       <module name="couponProject" target="17" />
       <module name="felix-coupon" target="1.8" />
+      <module name="felix-order" target="1.8" />
+      <module name="felix-order (1)" target="1.8" />
       <module name="felix-shop" target="1.8" />
       <module name="felix-user" target="1.8" />
       <module name="felix.user" target="1.8" />
+      <module name="order-app" target="1.8" />
+      <module name="order-service-api" target="1.8" />
+      <module name="order-service-api2" target="8" />
+      <module name="order-service-appi" target="8" />
+      <module name="shop" target="1.8" />
       <module name="user-app" target="1.8" />
       <module name="user-service-api" target="1.8" />
     </bytecodeTargetLevel>
@@ -37,6 +45,10 @@
       <module name="felix-shop" options="-parameters" />
       <module name="felix-user" options="-parameters" />
       <module name="felix.user" options="-parameters" />
+      <module name="order-app" options="-parameters" />
+      <module name="order-service-api" options="-parameters" />
+      <module name="order-service-api2" options="-parameters" />
+      <module name="order-service-appi" options="-parameters" />
       <module name="user-app" options="-parameters" />
       <module name="user-service-api" options="-parameters" />
     </option>

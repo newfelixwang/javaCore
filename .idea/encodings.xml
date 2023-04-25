@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/couponProject/src/main/java" charset="UTF-8" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.coupon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.order/order-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.order/order-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.order/order-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/felix.user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.user/user-app/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.user/user-app/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.user/user-service-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/felix.user/user-service-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/shop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/felix-shop/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../../../../maven/repo/org/springframework/boot/spring-boot-starter-parent/2.7.5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/felix-shop/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

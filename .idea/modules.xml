@@ -5,8 +5,12 @@
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/coupon-app.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-app/coupon-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/coupon-service-api.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/coupon-service-api/coupon-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.coupon/felix-coupon.iml" filepath="$PROJECT_DIR$/felix-shop/felix.coupon/felix-coupon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.order/felix-order.iml" filepath="$PROJECT_DIR$/felix-shop/felix.order/felix-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix-shop.iml" filepath="$PROJECT_DIR$/felix-shop/felix-shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/felix-user.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/felix-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.order/order-app/order-app.iml" filepath="$PROJECT_DIR$/felix-shop/felix.order/order-app/order-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.order/order-service-api/order-service-api.iml" filepath="$PROJECT_DIR$/felix-shop/felix.order/order-service-api/order-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/felix-shop/shop/shop.iml" filepath="$PROJECT_DIR$/felix-shop/shop/shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/user-app/user-app.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/user-app/user-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/felix-shop/felix.user/user-service-api/user-service-api.iml" filepath="$PROJECT_DIR$/felix-shop/felix.user/user-service-api/user-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
