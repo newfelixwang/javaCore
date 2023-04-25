@@ -1,6 +1,10 @@
 package com.wang.userapp.service;
 
 import com.wang.userapp.domain.TUserCoupon;
+import com.wang.userapp.mapper.TUserCouponMapper;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * @Author：wp
@@ -10,9 +14,21 @@ import com.wang.userapp.domain.TUserCoupon;
  * @Date：2023/3/15 17:41
  * @Filename：CouponService
  */
-public interface UserService {
+@Service
+public class UserService {
 
-    void print();
+    @Resource
+    private TUserCouponMapper tUserCouponMapper;
 
-    TUserCoupon getuserById(Integer id);
+
+    public void print() {
+        System.out.println("###");
+    }
+
+    public TUserCoupon getuserById(Integer id) {
+
+        TUserCoupon tUserCoupon = tUserCouponMapper.selectByPrimaryKey(id);
+        return tUserCoupon;
+    }
+
 }

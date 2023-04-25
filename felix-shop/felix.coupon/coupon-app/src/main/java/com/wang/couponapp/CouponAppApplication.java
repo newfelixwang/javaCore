@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @MapperScan("com.wang.couponapp.mapper")
 @EnableDubboConfig
-@DubboComponentScan("com.wang.userapp.service.dubbo")
+@DubboComponentScan({"com.wang.userapp.service.dubbo","com.wang.couponapp.service"})
 @EnableScheduling
 public class CouponAppApplication {
 

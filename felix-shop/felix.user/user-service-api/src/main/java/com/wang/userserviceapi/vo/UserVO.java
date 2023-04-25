@@ -1,6 +1,5 @@
 package com.wang.userserviceapi.vo;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,10 +7,10 @@ import java.util.Date;
  * @Package：com.wang.userserviceapi.vo
  * @Project：java-Core
  * @name：UserVO
- * @Date：2023/4/13 17:12
+ * @Date：2023/4/25 15:23
  * @Filename：UserVO
  */
-public class UserVO implements Serializable {
+public class UserVO {
 
     private Integer id;
 

@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @MapperScan("com.wang.userapp.mapper")
 @EnableDubboConfig
-@DubboComponentScan("com.wang.userapp.service.dubbo")
+@DubboComponentScan({"com.wang.userapp.service.dubbo","com.wang.couponapp.service"})
 public class UserAppApplication {
 
     public static void main(String[] args) {

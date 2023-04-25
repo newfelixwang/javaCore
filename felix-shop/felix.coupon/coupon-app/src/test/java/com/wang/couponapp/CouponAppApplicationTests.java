@@ -4,6 +4,7 @@ import com.wang.couponapp.domain.TCoupon;
 import com.wang.couponapp.domain.TCouponExample;
 import com.wang.couponapp.mapper.TCouponMapper;
 import com.wang.couponapp.service.CouponService;
+import com.wang.couponserviceapi.dto.UserCouponDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -14,7 +15,6 @@ import java.util.UUID;
 
 @SpringBootTest
 class CouponAppApplicationTests {
-
 
 
     @Resource
@@ -30,8 +30,8 @@ class CouponAppApplicationTests {
     }
 
     @Test
-    public void insert(){
-        for(int i=0;i<100000;i++){
+    public void insert() {
+        for (int i = 0; i < 100000; i++) {
             TCoupon tCoupon = new TCoupon();
             tCoupon.setAchieveAmount(500);
             tCoupon.setReduceAmount(20);
@@ -47,28 +47,38 @@ class CouponAppApplicationTests {
     }
 
     @Test
-    public void delete(){
+    public void delete() {
         tCouponMapper.deleteByPrimaryKey(7);
     }
 
     @Test
-    public void update(){
+    public void update() {
         TCoupon tCoupon = new TCoupon();
         tCoupon.setId(8);
         tCoupon.setCode("9527");
-        tCouponMapper.updateByPrimaryKeySelective(tCoupon);
         tCouponMapper.updateByPrimaryKey(tCoupon);
     }
 
 
     @Test
-    public void select(){
+    public void select() {
         // select * from t_coupon where code = "00415d96-49bd-4cce-83e3-08302b9aa084" and status=0 and achieve_amount between (100,1000) and title not like '%111%';
         TCouponExample example = new TCouponExample();
         example.createCriteria().andCodeEqualTo("fd7911b8-81e5-4dac-bdbe-b666e684390e").andStatusEqualTo(0)
-                .andAchieveAmountBetween(100,1000).andTitleNotLike("111");
-        List<TCoupon> tCoupon =  tCouponMapper.selectByExample(example);
+                .andAchieveAmountBetween(100, 1000).andTitleNotLike("111");
+        List<TCoupon> tCoupon = tCouponMapper.selectByExample(example);
         System.err.println(tCoupon);
     }
+
+
+    @Test
+    public void testSaveCoupon() {
+        UserCouponDto dto = new UserCouponDto();
+        dto.setUserId(123);
+        dto.setCouponId(1);
+        dto.setOrderId(10086);
+        couponService.saveUserCoupon(dto);
+    }
+
 
 }
