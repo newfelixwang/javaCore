@@ -23,11 +23,13 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.apache.dubbo.config.annotation.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutionException;
@@ -102,7 +104,7 @@ public class CouponService implements ICouponService {
         ConcurrentMap<Integer, List<TCoupon>> integerListConcurrentMap = couponCache.asMap();
         List<TCoupon> tCoupons = integerListConcurrentMap.get(1);
         List<TCouponDto> dtos = Lists.newArrayList();
-        BeanUtil.copyProperties(tCoupons,dtos);
+        BeanUtil.copyProperties(tCoupons, dtos);
         return dtos;
     }
 
@@ -189,6 +191,46 @@ public class CouponService implements ICouponService {
         tUserCoupon.setUserCouponCode(coupon);
         tUserCouponMapper.insert(tUserCoupon);
         return "领取成功";
+    }
+
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    public List<String> queryList() {
+
+        return null;
+    }
+
+
+    private static final String COUPON = "couponSet";
+    private static final int COUPON_NUM = 5;
+
+
+    /**
+     * 查询到需要返回的数据
+     *
+     * @return
+     */
+    private List<String> queryCouponList() {
+        Set<String> set = redisTemplate.opsForZSet().reverseRange(COUPON, 0, -1);
+        return set.stream().limit(COUPON_NUM).collect(Collectors.toList());
+    }
+
+    /**
+     * 保存每一个优惠券信息
+     *
+     * @param userCouponId
+     */
+    public void updateConpon(String userCouponId) {
+        redisTemplate.opsForZSet().add(COUPON, userCouponId, System.currentTimeMillis());
+        //将优惠券信息只保留需要展示部分，删除最开始的那一条
+        Set<String> range = redisTemplate.opsForZSet().range(COUPON, 0, -1);
+        if (range.size() > COUPON_NUM) {
+            String s = range.stream().findFirst().get();
+            redisTemplate.opsForZSet().remove(COUPON, s);
+        }
+
     }
 
 }
