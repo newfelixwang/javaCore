@@ -44,13 +44,13 @@ spring:
     port: 6379
     connect-timeout: 30000
     timeout: 50000
-    password: 123456
-    jedis:
-      pool:
-        max-active: 20
-        min-idle: 0
-        max-wait: -1
-        max-idle: 20
+#    password: 123456
+#    jedis:
+#      pool:
+#        max-active: 20
+#        min-idle: 0
+#        max-wait: -1
+#        max-idle: 20
 
 
 dubbo:

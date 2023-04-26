@@ -11,12 +11,14 @@ import org.redisson.api.RedissonClient;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -33,11 +35,14 @@ class CouponAppApplicationTests {
     @Resource
     private RedisTemplate redisTemplate;
 
-    @Resource
-    private RedissonClient redissonClient;
+//    @Resource
+//    private RedissonClient redissonClient;
 
-    @Resource
-    private JedisPool jedisPool;
+//    @Resource
+//    private JedisPool jedisPool;
+
+//    @Resource
+//    private Jedis jedis;
 
     @Test
     public void contextLoads() {
@@ -98,33 +103,66 @@ class CouponAppApplicationTests {
 
     //比較 redistemplate  Jedis  redisson
     @Test
-    public void testRedistemplate(){
-        redisTemplate.opsForValue().set("a","ffff");
-        Object a = redisTemplate.opsForValue().get("a");
+    public void testRedistemplate() {
+        redisTemplate.opsForValue().set("hhhh", "ffff");
+        Object a = redisTemplate.opsForValue().get("hhhh");
         System.err.println(a);
     }
 
-    @Test
-    public void testJedis(){
-        Jedis jedis = jedisPool.getResource();
-        jedis.set("a","1");
-        String a = jedis.get("a");
+//    @Test
+//    public void testJedis() {
+//        Jedis jedis = jedisPool.getResource();
+//        jedis.set("a", "1");
+//        String a = jedis.get("a");
+//
+//        Long aa = jedis.setnx("aa", "");
+//        System.err.println(aa);
+//        System.err.println(a);
+//    }
 
-        Long aa = jedis.setnx("aa", "");
-        System.err.println(aa);
-        System.err.println(a);
+//    @Test
+//    public void testRedissonClient() {
+//
+//        RLock lock = redissonClient.getLock("bb");
+//        lock.lock();
+//        lock.unlock();
+//        System.err.println("rrrrr");
+//    }
+
+
+    @Test
+    public void testRedis() throws InterruptedException {
+        redisTemplate.opsForValue().set("wang", "w");
+        System.out.println(redisTemplate.opsForValue().get("wang"));
+        Thread thread = Thread.currentThread();
+        thread.sleep(300);
+        redisTemplate.delete("wang");
+        System.out.println("delete");
     }
 
+
     @Test
-    public void testRedissonClient(){
+    public void testSortList() {
+        ZSetOperations zSet = redisTemplate.opsForZSet();
+        zSet.add("COUPON","DI:1",1);
+        zSet.add("COUPON","DI:2",2);
+        zSet.add("COUPON","DI:3",3);
+        zSet.add("COUPON","DI:4",4);
 
-        RLock lock = redissonClient.getLock("a");
-        lock.lock();
-        lock.unlock();
-        System.err.println("aaaa");
+        //从row 加入的时候，才是输出所有参数
+        Set coupon = zSet.range("COUPON", 0, -1);
+        coupon.stream().forEach(System.out::println);
+        zSet.incrementScore("COUPON","DI:4",2);
 
+        zSet.incrementScore("COUPON","DI:1",1);
 
+        Set coupon1 = zSet.rangeByScore("COUPON", 0, -1);
+        coupon1.stream().forEach(System.out::println);
+
+        Set coupon2 = redisTemplate.opsForZSet().range("COUPON", 0, 2);
+        coupon2.stream().forEach(System.out::println);
+
+        redisTemplate.opsForZSet().remove("COUPON","DI:1");
     }
-
 
 }
