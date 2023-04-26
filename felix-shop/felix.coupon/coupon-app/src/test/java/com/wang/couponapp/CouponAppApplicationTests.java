@@ -6,12 +6,19 @@ import com.wang.couponapp.mapper.TCouponMapper;
 import com.wang.couponapp.service.CouponService;
 import com.wang.couponserviceapi.dto.UserCouponDto;
 import org.junit.jupiter.api.Test;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootTest
 class CouponAppApplicationTests {
@@ -22,6 +29,15 @@ class CouponAppApplicationTests {
 
     @Resource
     private TCouponMapper tCouponMapper;
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    @Resource
+    private RedissonClient redissonClient;
+
+    @Resource
+    private JedisPool jedisPool;
 
     @Test
     public void contextLoads() {
@@ -78,6 +94,36 @@ class CouponAppApplicationTests {
         dto.setCouponId(1);
         dto.setOrderId(10086);
         couponService.saveUserCoupon(dto);
+    }
+
+    //比較 redistemplate  Jedis  redisson
+    @Test
+    public void testRedistemplate(){
+        redisTemplate.opsForValue().set("a","ffff");
+        Object a = redisTemplate.opsForValue().get("a");
+        System.err.println(a);
+    }
+
+    @Test
+    public void testJedis(){
+        Jedis jedis = jedisPool.getResource();
+        jedis.set("a","1");
+        String a = jedis.get("a");
+
+        Long aa = jedis.setnx("aa", "");
+        System.err.println(aa);
+        System.err.println(a);
+    }
+
+    @Test
+    public void testRedissonClient(){
+
+        RLock lock = redissonClient.getLock("a");
+        lock.lock();
+        lock.unlock();
+        System.err.println("aaaa");
+
+
     }
 
 

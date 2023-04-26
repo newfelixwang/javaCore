@@ -223,6 +223,8 @@ public class CouponService implements ICouponService {
      * @param userCouponId
      */
     public void updateConpon(String userCouponId) {
+        //redis的score 增加
+      //  redisTemplate.opsForZSet().incrementScore(COUPON,userCouponId,1);
         redisTemplate.opsForZSet().add(COUPON, userCouponId, System.currentTimeMillis());
         //将优惠券信息只保留需要展示部分，删除最开始的那一条
         Set<String> range = redisTemplate.opsForZSet().range(COUPON, 0, -1);
