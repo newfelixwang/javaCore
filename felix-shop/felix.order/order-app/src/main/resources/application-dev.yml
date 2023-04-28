@@ -65,3 +65,14 @@ dubbo:
   # 注册监控中⼼
   monitor:
     protocol: registry
+
+
+##rocketmq  生产者
+rocketmq:
+  producer:
+    groupName: shop
+    namesrvAddr: 127.0.0.1:9876
+    default: true
+
+
+

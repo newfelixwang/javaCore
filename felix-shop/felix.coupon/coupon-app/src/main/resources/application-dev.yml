@@ -84,3 +84,12 @@ logging:
   config: classpath:logback-spring.xml
   level:
     root: info
+rocketmq:
+  # 消费者配置
+  consumer:
+    pay:
+      groupName: payResult
+      namesrvAddr: 127.0.0.1:9876
+    order:
+      groupName: saveOrder
+      namesrvAddr: 127.0.0.1:9876
