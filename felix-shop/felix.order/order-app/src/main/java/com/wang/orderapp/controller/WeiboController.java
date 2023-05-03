@@ -43,9 +43,10 @@ public class WeiboController {
         for (int i = 0; i < i1; i++) {
             int articleId = new Random().nextInt(300);
             int like = new Random().nextInt(50);
-            tArticleMapper.insert(new TArticle(1, articleId, new Date(), new Date()
-                    , "https://baidu.com", "12", like));
             redisTemplate.opsForZSet().add(ARTICLE, articleId, like);
+
+//            tArticleMapper.insert(new TArticle(1, articleId, new Date(), new Date()
+//                    , "https://baidu.com", "12", like));
 
         }
 
@@ -61,11 +62,11 @@ public class WeiboController {
     }
 
     @GetMapping("/sort")
-    public Set sortArticle(){
-        Set set = redisTemplate.opsForZSet().reverseRangeByScore(ARTICLE, 0, -1);
+    public Set sortArticle() {
+        Set set = redisTemplate.opsForZSet().reverseRange(ARTICLE, 0, -1);
         Iterator iterator = set.iterator();
-        while (iterator.hasNext()){
-            System.out.println("排序后—"+iterator.next());
+        while (iterator.hasNext()) {
+            System.out.println("排序后文章ID，score点击最高的排序规则—" + iterator.next());
         }
         return set;
     }
