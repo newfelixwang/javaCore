@@ -47,7 +47,7 @@
 <!--			<generatedKey column="id" sqlStatement="JDBC"/>-->
 <!--		</table>-->
 
-		<table tableName="t_user">
+		<table tableName="t_article">
 			<generatedKey column="id" sqlStatement="JDBC"/>
 		</table>
 
