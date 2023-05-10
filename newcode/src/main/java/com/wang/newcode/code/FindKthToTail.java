@@ -40,9 +40,18 @@ public class FindKthToTail {
 
 
     public static void main(String[] args) {
-        ListNode listNode  = new ListNode(5);
-        ListNode s =   FindKthToTail(listNode,1);
+        ListNode listNode = new ListNode(5);
+        ListNode sss = listNode;
+        ListNode s = FindKthToTail(listNode, 1);
         System.out.println(s);
+
+        int int1  = 2147483647;
+        int int2 = int1+1;
+        int int3 = int1+2;
+        System.out.println("##");
+        System.out.println(int1);
+        System.out.println(int2);
+        System.out.println(int3);
     }
 
 }
